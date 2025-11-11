@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+
+  <div class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+      
+      <div>
+        <img class="w-full h-full object-cover" src="../public/assets/images/Rectangle 196.png" alt="Welcome Image">
+      </div>
+
+      <div class="p-4 sm:p-6 md:p-8">
+
+        <form class="space-y-6 p-15" action="#">
+          <h5 class="text-4xl font-medium text-slate-700 dark:text-white mb-1.5">Create an&nbsp;Account</h5>
+          <p class="text-base">Sign In Your Account</p>
+          <div>
+            <label for="Yourname" class="text-base block mb-2 font-medium text-gray-900 dark:text-white">Your Name</label>
+            <input type="text" name="name" id="name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Username" required />
+          </div>
+          <div>
+            <label for="email" class="text-base block mb-2 font-medium text-gray-900 dark:text-white">Your Email</label>
+            <input type="email" name="email" id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Email" required />
+          </div>
+          <div>
+            <label for="password" class="text-base block mb-2 font-medium text-gray-900 dark:text-white">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              required />
+          </div>
+          <div>
+            <label for="confirmpassword" class="text-base block mb-2 font-medium text-gray-900 dark:text-white">Confirm Password</label>
+            <input type="confirmpassword" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              required />
+          </div>
+          <div class="flex items-start">
+            <div class="flex items-start">
+            </div>
+          </div>
+          <button type="submit" class="w-full text-white bg-slate-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REGISTER</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>

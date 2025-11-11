@@ -1,0 +1,623 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="../src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-[Roboto]">
+    <!-- Header -->
+
+    <header class="bg-slate-700">
+        <!-- Navbar -->
+        <nav class="flex flex-row justify-between place-items-center w-[92%] mx-auto">
+            
+            <!-- Div Logo -->
+            <div class="m-3">
+                <img class="w-32" src="../public/assets/images/logoratu 4.png" alt="Logo">
+            </div>
+
+            <!-- Div Search Bar -->
+             <div class="w-xl">
+                <form class="w-full" action="/search" method="GET">
+                    <label for="search-input"></label>
+                    <input class="rounded-lg w-full" type="search" id="search-input" name="q" placeholder="Cari Disini...">
+                </form>
+             </div>
+
+            <!-- Div Icon Sebelah Kanan -->
+            <div>
+                <!-- List item -->
+                <ul class="flex flex-row gap-x-8 place-items-center">
+
+                    <!-- Notif -->
+                    <li>
+                        <a href="#">
+                            <img class="w-8 h-10" src="../public/assets/images/Bells.png" alt="Notifikasi">
+                        </a>
+                    <!-- Keranjang -->
+                    <li>
+                        <a href="#">
+                            <img class="w-10 h-10" src="../public/assets/images/Cart.png" alt="Keranjang">
+                        </a>
+                    <!-- Profil -->
+                    <li>
+                        <a href="#">
+                            <img class="w-10 h-10" src="../public/assets/images/Profile.png" alt="Profil">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+  
+        </nav>
+    </header>
+
+    <!-- Section kategori -->
+
+    <section name="kategori">
+        <!-- Background -->
+        <div class="bg-slate-100">
+            <!-- Wrapper -->
+            <div class="w-[90%] mx-auto">
+                <!-- List Kategori -->
+                <ul class="flex flex-row justify-around p-4">
+                    
+                    <!-- Katalog -->
+                    
+                    <li>
+                        <div class="flex flex-row place-items-center gap-x-2.5">
+                            <img class="w-8" src="../public/assets/images/Katalog.png" alt="Katalog">
+                            <P class="text-2xl"><a href=""></a>Katalog</P>
+                        </div>
+                    </li>
+                    
+                    <!-- Popular -->
+                    <li>
+                        <div class="flex flex-row place-items-center gap-x-2.5">
+                            <img class="w-8" src="../public/assets/images/Popular.png" alt="Popular">
+                            <P class="text-2xl"><a href=""></a>Popular</P>
+                        </div>
+                    </li>
+                    
+                    <!-- Rakit PC -->
+                    <li>
+                        <div class="flex flex-row place-items-center gap-x-2.5">
+                            <img class="w-8" src="../public/assets/images/RakitPC.png" alt="Rakit PC">
+                            <P class="text-2xl"><a href=""></a>Rakit PC</P>
+                        </div class="flex flex-row">
+                    </li>
+                    
+                    <!-- Konsultasi -->
+                    <li>
+                        <div class="flex flex-row place-items-center gap-x-2.5">
+                            <img class="w-8" src="../public/assets/images/Konsultasi.png" alt="Konsultasi">
+                            <P class="text-2xl"><a href=""></a>Konsultasi</P>
+                        </div>
+                    </li>
+                    
+                    <!-- Kontak -->
+                    <li>
+                        <div class="flex flex-row place-items-center gap-x-2.5">
+                            <img class="w-8" src="../public/assets/images/Kontak.png" alt="Kontak">
+                            <P class="text-2xl"><a href="">Kontak</a></P>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+     <!-- Hero Carousel -->
+
+    <div id="default-carousel" class="relative w-full bg-red-800" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./assets/images/HeroSection.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div> -->
+        <!-- Slider controls
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button> -->
+    </div>
+
+    <!-- Katalog Icons -->
+    <section name="katalog-icons">
+        
+        <!-- Background biru tua -->
+        
+        <div class="bg-slate-700">
+            
+            <!-- Bagian Atas  -->
+            <div class="flex flex-row text-white place-items-center justify-betwen">
+                
+                <!-- Teks Katalog -->
+                
+                <div class="flex flex-row text-white place-items-center m-2.5 w-full ">
+                    <img class="w-16" src="../public/assets/images/catalogwhite.png" alt="Katalog">
+                    <h2 class="text-4xl font-extrabold mr-2.5">KATALOG</h2>
+                    <h2 class="text-4xl font-extrabold mr-5 self-center">|</h2>
+                    <p class="text-xl font-extrabold mr-10 self-center">Pilih kategori sesuai kebutuhanmu dari laptop hingga komponen rakitan.</p>
+                </div>
+
+            </div>
+
+            <!-- Bagian Bawah -->
+            <div>
+                
+                <!-- List Icons -->
+                <ul class="flex flex-row justify-between gap-x-10 place-items-center p-10 pt-2 ">
+
+                    <!-- CPU -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/cpuicon.png" alt=""></a>
+                    </li>
+
+                    <!-- Monitor -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/monitoricon.png" alt=""></a>
+                    </li>
+
+                    <!-- RAM -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/ramicon.png" alt=""></a>
+                    </li>
+
+                    <!-- Laptop -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/laptopicon.png" alt=""></a>
+                    </li>
+
+                    <!-- GPU -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/GPU.png" alt=""></a>
+                    </li>
+
+                    <!-- Keyboard -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/Keyboard.png" alt=""></a>
+                    </li>
+
+                    <!-- Peripherals-->
+                    <li class="w-32"> 
+                        <a href=""><img src="./assets/images/Peripherals.png" alt=""></a>
+                    </li>
+
+                    <!-- Mouse -->
+                    <li class="w-32">
+                        <a href=""><img src="./assets/images/Mouse.png" alt=""></a>
+                    </li>
+                </ul>
+             
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Section Popular -->
+    <section>
+        
+        <!-- Popular Wrapper -->
+        <div class="bg-slate-100 flex flex-col">
+
+            <!-- Bagian Atas  -->
+            <div class="flex flex-row text-white place-items-center justify-betwen">
+                
+                <!-- Teks Katalog -->
+                
+                <div class="flex flex-row text-slate-700 place-items-center m-2.5 w-full ">
+                    <img class="w-12" src="../public/assets/images/Popular.png" alt="Katalog">
+                    <h2 class="text-4xl font-extrabold mr-2.5">POPULAR</h2>
+                    <h2 class="text-4xl font-extrabold mr-5 self-center">|</h2>
+                    <!-- Text tambahan kebagi 2 -->
+                    <div>
+                        <p class="text-xl font-extrabold mr-10 self-center">Laris Manis, Cepat Habis! &#128640</p>
+                        <p class="text-xl font-extrabold mr-10 self-center">Produk favorit paling dicari- harga spesial cuma di Ratu Komputer!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Section Bawah -->
+            <div class="flex flex-row place-items-center justify-around m-5">
+            
+                <!-- Gambar Kiri -->
+                 <div class="flex flex-col place-items-center justify-items-center">
+                    <img class="w-xl h-auto justify-items-center" src="./assets/images/promo1.png" alt="">
+                    <p class="text-4xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK TERLARIS</p>
+                 </div>
+
+                <!-- Gambar Kanan -->
+                 <div class="flex flex-col place-items-center justify-items-center">
+                    <img class="w-xl h-auto justify-items-center mb-5" src="./assets/images/promo2.png" alt="">
+                    <p class="text-4xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK SPESIAL PROMO</p>
+                 </div>
+            </div>
+
+
+        </div>
+        
+    </section>
+
+    <!-- Section Simulasi Rakit PC -->
+    <section>
+        <!-- Wrapper -->
+        <div class="bg-slate-700 flex flex-row text-white">
+
+            <!-- Kiri -->
+
+            <div class="flex flex-col mx-auto self-center h-auto">
+                
+                <!-- Judul -->
+               <!-- Teks Katalog -->
+                
+                <div class="flex flex-row text-white place-items-center m-2.5 w-full justify-items-center ">
+                    <img class="w-16" src="../public/assets/images/RakitPCWhite.png" alt="Katalog">
+                    <h2 class="text-6xl font-semibold mr-2.5 m-10 ml-1">Simulasi Rakit PC</h2>
+                </div>
+                
+                <!--Cards-->
+
+
+                <div class="flex flex-col w-auto h-60 p-6 bg-slate-100 border rounded-2xl shadow-sm justify-items-center">
+
+                    <h5 class="mb-10 text-3xl font-bold tracking-tight text-gray-900 self-center text-center">
+                        Mau coba simulasi build<br>Impianmu?
+                    </h5>
+                    
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 self-center text-center">
+                        Coba Sekarang!
+                    </h5>
+
+                    <a href="#" class="self-center inline-flex items-center px-3 py-2 text-2xl font-medium text-center text-white bg-slate-700 rounded-lg ">
+                        Klik Disini
+                    </a>
+                </div>
+
+            
+            </div>
+
+            <!-- Kanan -->
+
+            <div>
+                <img class="w-auto h-auto" src="./assets/images/fotopc.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rekomendasi Lainnya -->
+    <section>
+        <!-- Wrapper -->
+        <div class="bg-slate-100 flex flex-col">
+            
+            <!-- Text Atas -->
+            <div class="flex flex-row text-black place-items-center justify-betwen w-[90%] mx-auto">
+                <div class="flex flex-row place-items-center m-2.5 w-full ">
+                    <h2 class="text-4xl font-extrabold mr-2.5">REKOMENDASI LAINNYA</h2>
+                    <h2 class="text-4xl font-extrabold mr-5 self-center text-slate-700">|</h2>
+                    <div>
+                        <p class="text-xl font-extrabold mr-10 self-center  text-slate-700">Cek produk rekomendasi dari Ratu Komputer yang</p>
+                        <p class="text-xl font-extrabold mr-10 self-center  text-slate-700">siap bantu PC kamu makin cepat, kuat, dan awet!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card List Bawah -->
+            <div>
+                <ul class="flex flex-row justify-around m-5 mb-7">
+                    <!-- RAM -->
+                    <li>
+                        <!-- Card Wrapper -->
+                        <div class="max-w-3xs h-full  bg-slate-700 border border-gray-200 rounded-2xl shadow-sm">
+                            <!-- Gambar -->
+                            <a href="#">
+                                <img class="w-full h-auto rounded-t-2xl" src="./assets/images/RAM.png" alt="" />
+                            </a>
+                            <!-- Text Section -->
+                            <div class="p-5">
+                                <!-- Judul Produk -->
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">RAM 8GB DDR4</h5>
+                                </a>
+                                <!-- Harga Produk -->
+                                <p class="mb-3 font-normal text-white">Rp 50.000</p>
+                                <!-- Deskripsi Produk -->
+                                <p class="mb-3 font-normal text-white">RAM 8GB DDR4 Untuk Meningkatkan Performa Dalam Multitasking</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- SSD -->
+                    <li>
+                        <!-- Card Wrapper -->
+                        <div class="max-w-3xs h-full bg-slate-700 border border-gray-200 rounded-2xl shadow-sm">
+                            <!-- Gambar -->
+                            <a href="#">
+                                <img class="w-full h-auto rounded-t-2xl" src="./assets/images/SSD.png" alt="" />
+                            </a>
+                            <!-- Text Section -->
+                            <div class="p-5">
+                                <!-- Judul Produk -->
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">SSD 512GB NVMe Gen4</h5>
+                                </a>
+                                <!-- Harga Produk -->
+                                <p class="mb-3 font-normal text-white">Rp 490.000</p>
+                                <!-- Deskripsi Produk -->
+                                <p class="mb-3 font-normal text-white">Rasakan loading dan boot super cepat untuk gaming.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- PSU -->
+                    <li>
+                        <!-- Card Wrapper -->
+                        <div class="max-w-3xs h-full bg-slate-700 border border-gray-200 rounded-2xl shadow-sm">
+                            <!-- Gambar -->
+                            <a href="#">
+                                <img class="w-full h-auto rounded-t-2xl" src="./assets/images/PSU.png" alt="" />
+                            </a>
+                            <!-- Text Section -->
+                            <div class="p-5">
+                                <!-- Judul Produk -->
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Power Supply 650W 80+ Bronze</h5>
+                                </a>
+                                <!-- Harga Produk -->
+                                <p class="mb-3 font-normal text-white">Rp 480.000</p>
+                                <!-- Deskripsi Produk -->
+                                <p class="mb-3 font-normal text-white">Daya stabil dan efisien untuk melindungi seluruh komponen komputer kamu</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Cooler -->
+                    <li>
+                        <!-- Card Wrapper -->
+                        <div class="max-w-3xs h-full bg-slate-700 border border-gray-200 rounded-2xl shadow-sm">
+                            <!-- Gambar -->
+                            <a href="#">
+                                <img class="w-full h-auto rounded-t-2xl" src="./assets/images/Liquid Cooling.png" alt="" />
+                            </a>
+                            <!-- Text Section -->
+                            <div class="p-5">
+                                <!-- Judul Produk -->
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">CPU Cooler RGB Aurora Silent</h5>
+                                </a>
+                                <!-- Harga Produk -->
+                                <p class="mb-3 font-normal text-white">Rp 320.000</p>
+                                <!-- Deskripsi Produk -->
+                                <p class="mb-3 font-normal text-white">Desain stylish dengan pencahayaan RGB dan sistem pendinginan senyap</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ dan QNA -->
+    <section>
+        <!-- Wrapper -->
+        <div class="bg-slate-100 grid grid-cols-2">
+
+            <!-- Kiri -->
+            <div class="flex flex-col justify-center items-center m-12">
+
+                <!-- Atas -->
+                <div class="flex flex-row text-slate-700 place-items-center m-2.5">
+                    <img class="w-16 m-1" src="../public/assets/images/qmark.png" alt="Katalog">
+                    <!-- Text tambahan kebagi 2 -->
+                    <div>
+                        <p class="text-4xl font-extrabold mr-10 self-center">Kenapa Pelanggan</p>
+                        <p class="text-4xl font-extrabold mr-10 self-center">Percaya Ratu Komputer?</p>
+                    </div>
+                </div>
+                 
+                <!-- Bawah --> 
+                 <div>
+                    <!-- List kata-kata -->
+                    <ul class="text-white w-xl">
+                        <li>
+                            <div class="text-2xl bg-slate-700 p-2 m-5 rounded-xl">
+                                <p>&#9989; Produk Lengkap & Original</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-2xl bg-slate-700 p-2 m-5 rounded-xl">
+                                <p>&#9989; Harga Bersahabat</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-2xl bg-slate-700 p-2 m-5 rounded-xl">
+                                <p>&#9989; Konsultasi Langsung</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-2xl bg-slate-700 p-2 m-5 rounded-xl">
+                                <p>&#9989; Terpercaya dan aman</p>
+                            </div>
+                        </li> 
+                    </ul>
+                 </div>      
+            </div>
+
+            <!-- Kanan -->
+            <div class="bg-slate-700 flex place-items-center justify-center">
+                <!-- Text -->
+                <div class=" text-white font-bold text-center text-3xl">
+                    <p class="font-extrabold m-2.5">Butuh Konsultasi?</p>
+                    <p class="font-extrabold m-2.5">Tanyakan Lebih Lanjut</p>
+                    <p class="font-extrabold m-2.5">Tentang apa saja.</p>
+                    <button type="button" class="focus:outline-none text-slate-700 bg-green-200 font-extrabold rounded-lg text-xl px-5 py-2.5 me-2 mb-5 p-10 m-5">Whatsapp</button>
+                    <p>GRATIS!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alamat -->
+
+    <section>
+        <!-- Wrapper -->
+        <div class="grid grid-cols-2 bg-slate-100">
+            <!-- Maps Kiri -->
+             <div class="flex flex-col justify-center items-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.032252552812!2d106.1645083!3d-6.126362199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41f5255b895725%3A0xc22172dcd7ef4a8!2sRatu%20Computer!5e0!3m2!1sid!2sid!4v1761474033426!5m2!1sid!2sid" class="w-3xl h-96 rounded-lg shadow-xl m-10" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+
+            <!-- Alamat Kanan (Text) -->
+            <div class="flex flex-col justify-center text-slate-700 ml-8">
+                 <div>
+                    <div>
+                        <h2 class="text-left font-extrabold text-4xl">RATU COMPUTER SOLUSI</h2>
+                        <h2 class="text-left font-extrabold text-4xl">KEBUTUHAN PC MU !</h2>
+                    </div>
+
+                    <div class="flex flex-col mt-5 gap-y-4">
+                        
+                        <div class="flex flex-row items-start">
+                            <img class="w-12 mr-4 shrink-0" src="./assets/images/Location.png" alt="">
+                            
+                            <div>
+                                <p class="text-left text-3xl">Jl. Ciwaru Raya No. RT04/16,</p>   
+                                <p class="text-left text-3xl">Cipare, Kec. Serang, Kota Serang,</p>
+                                <p class="text-left text-3xl">Banten 42117</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center">
+                            <img class="w-12 mr-4 shrink-0" src="./assets/images/WhatsApp.png" alt="">
+                            
+                            <div>
+                                <p class="text-left font-bold text-3xl">0856-9226-1460</p>
+                            </div>
+                        </div>
+
+                    </div> </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+
+    <footer class="bg-slate-700">
+        <!-- Wrapper -->
+        <div class="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <a href="https://flowbite.com/" class="flex items-center">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                        </li>
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 sm:justify-center sm:mt-0">
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    <span class="sr-only">Facebook page</span>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                    <span class="sr-only">Discord community</span>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">Twitter page</span>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">GitHub account</span>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">Dribbble account</span>
+                </a>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
