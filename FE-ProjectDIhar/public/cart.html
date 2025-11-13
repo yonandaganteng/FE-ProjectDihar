@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link href="../src/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Keranjang Belanja - RATU COMPUTER</title>
 </head>
-        <body class="font-[Roboto] pt-24"></body>
-        <header class="bg-slate-700 fixed top-0 w-full z-50"> 
-        <nav class="flex flex-row justify-between place-items-center w-[90%] mx-auto">
-            <div class="mb-3">
-                <img class="w-32" src="../public/assets/images/logoratu 4.png" alt="Logo">
+
+<body class="font-[Roboto] pt-24">
+    <header class="bg-slate-700 fixed top-0 w-full z-50">
+        <nav class="flex flex-row justify-between place-items-center w-[90%] mx-auto py-3">
+
+            <div class="flex items-center gap-x-2">
+                <img class="w-32" src="../public/assets/images/logoratu 4.png" alt="Logo Ratu Computer">
             </div>
 
-                <!--sec search-->
-            <div class="w-xl">
+             <div class="w-xl">
                 <form class="w-full" action="/search" method="GET">
                     <label for="search-input"></label>
                     <input class="rounded-lg w-full" type="search" id="search-input" name="q" placeholder="Cari Disini...">
                 </form>
              </div>
-                <!--sec bagian kanan header-->
+
             <div>
                 <ul class="flex flex-row gap-x-8 place-items-center">
-                    <li><a href="#"><img class="w-8 h-10" src="../public/assets/images/Bells.png" alt="Notifikasi"></a></li>
-                    <li><a href="#"><img class="w-10 h-10" src="../public/assets/images/Cart.png" alt="Keranjang"></a></li>
-                    <li><a href="#"><img class="w-10 h-10" src="../public/assets/images/Profile.png" alt="Profil"></a></li>
+                    <li><a href="#"><img class="w-8 h-10" src="../public/assets/images/Bells.png" alt="Notifikasi"></a>
+                    </li>
+                    <li><a href="#"><img class="w-10 h-10" src="../public/assets/images/Cart.png" alt="Keranjang"></a>
+                    </li>
+                    <li><a href="#"><img class="w-10 h-10" src="../public/assets/images/Profile.png" alt="Profil"></a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main class="cart-container flex p-8 gap-6 max-w-7xl mx-auto">
-        
+
         <section class="cart-list flex-grow-[2] bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-2xl font-bold mb-5 pb-3 border-b border-gray-200">Keranjang</h2>
 
             <div class="select-all flex items-center mb-4 pb-3 border-b border-gray-200">
-                <input type="checkbox" id="check-all" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                <input type="checkbox" id="check-all"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
                 <label for="check-all" class="ml-2 text-base font-semibold text-gray-700">Pilih Semua</label>
             </div>
-            
+
             <div class="product-item flex items-center p-4 border-b border-gray-100 hover:bg-gray-50">
-                <input type="checkbox" class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
-                <img src="assets/images/mouse.png" alt="Mouse Galaxy" class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
+                <input type="checkbox"
+                    class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
+                <img src="assets/images/Mouse-Galaxy.png" alt="Mouse Galaxy"
+                    class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
                 <div class="product-details flex-grow">
                     <p class="stock-info text-sm font-bold text-orange-500 mb-0.5">Sisa 10</p>
                     <h3 class="product-name text-base font-semibold text-gray-800">Mouse Galaxy</h3>
@@ -54,15 +63,19 @@
                 </div>
                 <div class="product-price font-bold text-lg text-gray-800 w-32 text-right">Rp900.000</div>
                 <div class="quantity-control flex items-center ml-10">
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
                     <span class="px-3 font-semibold text-gray-800">3</span>
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
                 </div>
             </div>
 
             <div class="product-item flex items-center p-4 border-b border-gray-100 hover:bg-gray-50">
-                <input type="checkbox" class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
-                <img src="assets/images/ram.png" alt="RAM 256GB" class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
+                <input type="checkbox"
+                    class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
+                <img src="assets/images/ram.png" alt="RAM 256GB"
+                    class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
                 <div class="product-details flex-grow">
                     <p class="stock-info text-sm font-bold text-orange-500 mb-0.5">Sisa 25</p>
                     <h3 class="product-name text-base font-semibold text-gray-800">RAM 256GB</h3>
@@ -70,15 +83,19 @@
                 </div>
                 <div class="product-price font-bold text-lg text-gray-800 w-32 text-right">Rp100.000</div>
                 <div class="quantity-control flex items-center ml-10">
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
                     <span class="px-3 font-semibold text-gray-800">5</span>
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
                 </div>
             </div>
 
             <div class="product-item flex items-center p-4 border-b border-gray-100 hover:bg-gray-50">
-                <input type="checkbox" class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
-                <img src="assets/images/cooler.png" alt="Liquid Cooler" class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
+                <input type="checkbox"
+                    class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
+                <img src="assets/images/Liquid-Cooler.jpg" alt="Liquid Cooler"
+                    class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
                 <div class="product-details flex-grow">
                     <p class="stock-info text-sm font-bold text-orange-500 mb-0.5">Sisa 3</p>
                     <h3 class="product-name text-base font-semibold text-gray-800">Liquid Cooler</h3>
@@ -86,15 +103,19 @@
                 </div>
                 <div class="product-price font-bold text-lg text-gray-800 w-32 text-right">Rp2.000.000</div>
                 <div class="quantity-control flex items-center ml-10">
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
                     <span class="px-3 font-semibold text-gray-800">1</span>
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
                 </div>
             </div>
 
-            <div class="product-item flex items-center p-4">
-                <input type="checkbox" class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
-                <img src="assets/images/vr.png" alt="Vurrion MV-Series" class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
+            <div class="product-item flex items-center p-4 hover:bg-gray-50">
+                <input type="checkbox"
+                    class="product-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-4">
+                <img src="assets/images/Vurrion-MV-Series.jpeg" alt="Vurrion MV-Series"
+                    class="product-thumb w-20 h-20 object-cover rounded-md mr-4 border border-gray-200">
                 <div class="product-details flex-grow">
                     <p class="stock-info text-sm font-bold text-orange-500 mb-0.5">Sisa 1</p>
                     <h3 class="product-name text-base font-semibold text-gray-800">Vurrion MV-Series</h3>
@@ -102,58 +123,66 @@
                 </div>
                 <div class="product-price font-bold text-lg text-gray-800 w-32 text-right">Rp1.200.000</div>
                 <div class="quantity-control flex items-center ml-10">
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">-</button>
                     <span class="px-3 font-semibold text-gray-800">2</span>
-                    <button class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 w-6 h-6 rounded-sm border border-gray-300 flex items-center justify-center cursor-pointer text-base">+</button>
                 </div>
             </div>
-            
+
         </section>
 
         <aside class="summary-card flex-grow bg-white p-6 rounded-lg shadow-md h-fit">
             <h3 class="text-xl font-bold mb-4 pb-3 border-b border-gray-200">Ringkasan Belanja</h3>
-            
+
             <div class="summary-items space-y-2 mb-4">
                 <div class="summary-row flex justify-between text-sm text-gray-600">
-                    <span>Lorem (x3)</span>
-                    <span>Rp35.000</span>
+                    <span>Subtotal Produk</span>
+                    <span>Rp4.200.000</span>
                 </div>
                 <div class="summary-row flex justify-between text-sm text-gray-600">
-                    <span>Lorem (x3)</span>
-                    <span>Rp35.000</span>
+                    <span>Diskon</span>
+                    <span>- Rp0</span>
                 </div>
                 <div class="summary-row flex justify-between text-sm text-gray-600">
-                    <span>Lorem (x3)</span>
-                    <span>Rp35.000</span>
-                </div>
-                <div class="summary-row flex justify-between text-sm text-gray-600">
-                    <span>Lorem (x3)</span>
-                    <span>Rp35.000</span>
-                </div>
-                <div class="summary-row flex justify-between text-sm text-gray-600">
-                    <span>Lorem (x3)</span>
-                    <span>Rp35.000</span>
+                    <span>Biaya Layanan</span>
+                    <span>Rp5.000</span>
                 </div>
             </div>
 
-            <div class="delivery-options flex justify-between items-center py-4 border-y border-gray-200 mb-4">
-                <span class="delivery-label text-sm text-gray-700">Pengiriman standart</span>
-                <select class="p-1.5 border border-gray-300 rounded-md text-sm">
-                    <option value="V">V</option>
+            <div class="delivery-options flex justify-between items-center py-2 border-y border-gray-200 mb-4">
+                <span class="delivery-label text-sm text-gray-700">Pengiriman</span>
+                <select class="p-2 border border-gray-300 rounded-md text-sm">
+                    <option selected disabled>Pilih Kurir</option>
+                    <option value="JNE">JNE Reguler</option>
+                    <option value="POS">POS Kilat Khusus</option>
                 </select>
             </div>
 
             <div class="summary-total flex justify-between text-lg font-bold mb-6">
-                <span>Total</span>
-                <span class="total-price text-[#0A3D62]">Rp40.000.000</span>
+                <span>Total Belanja</span>
+                <span class="total-price text-[#0A3D62]">Rp4.205.000</span>
             </div>
 
-            <button class="checkout-web w-full p-3 mb-3 rounded-lg font-bold bg-[#0A3D62] text-white hover:bg-blue-900 transition duration-150">Lanjut Checkout via Web</button>
-            <button class="checkout-whatsapp w-full p-3 rounded-lg font-bold bg-[#4CAF50] text-white hover:bg-green-600 transition duration-150">Lanjut Checkout via WhatsApp</button>
+           <button class="checkout-web w-full p-3 mb-3 rounded-lg font-bold 
+    bg-slate-700 text-white 
+    transition duration-150
+    cursor-pointer">
+    Lanjut Checkout via Web
+</button>
+
+<button class="checkout-whatsapp w-full p-3 rounded-lg font-bold 
+    bg-green-600 text-white 
+    transition duration-150
+    cursor-pointer">
+    Lanjut Checkout via WhatsApp
+</button>
         </aside>
 
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
