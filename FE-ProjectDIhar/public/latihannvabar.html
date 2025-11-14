@@ -7,7 +7,26 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <link href="../src/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
+
+<style>
+    /* Tambahkan ini ke <style> di HTML atau file output.css Anda */
+.deskripsi-potong {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi maksimal 2 baris */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* Tambahkan elipsis */
+}
+
+.judul-potong {
+    overflow: hidden;
+    white-space: nowrap; /* Penting: Mencegah teks turun baris */
+    text-overflow: ellipsis; /* Menambahkan elipsis */
+}
+</style>
 
 <body class="font-[Roboto]">
     <!-- Header -->
@@ -240,14 +259,14 @@
             
                 <!-- Gambar Kiri -->
                  <div class="flex flex-col place-items-center justify-items-center">
-                    <img class="w-xl h-auto justify-items-center" src="./assets/images/promo1.png" alt="">
-                    <p class="text-4xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK TERLARIS</p>
+                    <img class="w-xl h-auto justify-items-center mb-5" src="./assets/images/promo1.png" alt="">
+                    <p class="text-3xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK TERLARIS</p>
                  </div>
 
                 <!-- Gambar Kanan -->
                  <div class="flex flex-col place-items-center justify-items-center">
                     <img class="w-xl h-auto justify-items-center mb-5" src="./assets/images/promo2.png" alt="">
-                    <p class="text-4xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK SPESIAL PROMO</p>
+                    <p class="text-3xl font-extrabold mr-2.5 text-slate-700 justify-items-center self-center">PRODUK SPESIAL PROMO</p>
                  </div>
             </div>
 
@@ -293,83 +312,140 @@
 </section>
 
     <!--Section Rekomendasi lainnya-->
-   <section class="bg-slate-100 py-12">
-    <div class="max-w-screen-xl mx-auto px-4">
-        
-        <div class="flex items-center mb-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 mr-4 whitespace-nowrap">REKOMENDASI LAINNYA</h2>
-            <span class="text-4xl font-extrabold text-slate-700 mr-4">|</span>
-            <p class="text-xl font-extrabold text-slate-700 leading-tight">Cek produk rekomendasi dari Ratu Komputer yang siap bantu PC kamu makin cepat, kuat, dan awet!</p>
-        </div>
 
         <!--CARD BAWAHNYA-->
 
-        <div class="relative"> 
+       <section class="bg-slate-100 py-16">
+        <div class="max-w-screen-xl mx-auto px-4">
             
-            <div class="grid grid-cols-4 gap-8 w-13/12"> 
-                
-                <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                    <a href="#">
-                        <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                            <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
-                        </div>
-                    </a>
-                    
-                    <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                        <h5 class="mb-1 text-base font-bold">RAM 8GB DDR4</h5> 
-                        <p class="mb-3 text-2xl font-extrabold leading-none">Rp 50.000</p>
-                        <p class="text-xs font-normal text-gray-300 leading-snug">RAM 8GB DDR4 untuk meningkatkan performa dalam multitasking</p> 
-                    </div>
-                </div>
-
-                <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                    <a href="#">
-                        <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                            <img class="w-4/5 h-auto object-contain" src="./assets/images/SSD.png" alt="SSD 512 GB NVMe Gen4" />
-                        </div>
-                    </a>
-                    <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                        <h5 class="mb-1 text-base font-bold">SSD 512 GB NVMe Gen4</h5>
-                        <p class="mb-3 text-2xl font-extrabold leading-none">Rp 490.000</p>
-                        <p class="text-xs font-normal text-gray-300 leading-snug">Rasakan kecepatan boot dan loading super cepat untuk gaming.</p>
-                    </div>
-                </div>
-
-                <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                    <a href="#">
-                        <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                            <img class="w-4/5 h-auto object-contain" src="./assets/images/PSU.png" alt="Power Supply 650W 80+ Bronze" />
-                        </div>
-                    </a>
-                    <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                        <h5 class="mb-1 text-base font-bold">Power Supply 650W 80+ Bronze</h5>
-                        <p class="mb-3 text-2xl font-extrabold leading-none">Rp 480.000</p>
-                        <p class="text-xs font-normal text-gray-300 leading-snug">Daya stabil dan efisien untuk melindungi seluruh komponen komputer kamu</p>
-                    </div>
-                </div>
-
-                <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                    <a href="#">
-                        <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                            <img class="w-4/5 h-auto object-contain" src="./assets/images/Liquid Cooling.png" alt="CPU Cooler RGB Aurora Silent" />
-                        </div>
-                    </a>
-                    <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                        <h5 class="mb-1 text-base font-bold">CPU Cooler RGB Aurora Silent</h5>
-                        <p class="mb-3 text-2xl font-extrabold leading-none">Rp 320.000</p>
-                        <p class="text-xs font-normal text-gray-300 leading-snug">Desain stylish dengan pencahayaan RGB dan sistem pendinginan senyap</p>
-                    </div>
-                </div>
+            <div class="flex items-center mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 mr-4 whitespace-nowrap">REKOMENDASI LAINNYA</h2>
+                <span class="text-4xl font-extrabold text-slate-700 mr-4">|</span>
+                <p class="text-xl font-extrabold text-slate-700 leading-tight">Cek produk rekomendasi dari Ratu Komputer yang siap bantu PC kamu makin cepat, kuat, dan awet!</p>
             </div>
             
-            <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-            </button>
+            <div class="relative"> 
+                
+                <div class="flex space-x-6 overflow-x-scroll snap-x owl-carousel owl-theme" style="-ms-overflow-style: none; scrollbar-width: none;"> 
+                    
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">RAM 8GB DDR4</h5> 
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 50.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">RAM 8GB DDR4 untuk meningkatkan performa dalam multitasking</p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/SSD.png" alt="SSD 512 GB NVMe Gen4" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">SSD 512 GB NVMe Gen4</h5>
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 490.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug overflow-hidden h-8">Rasakan kecepatan boot dan loading super cepat untuk gaming.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/PSU.png" alt="Power Supply 650W 80+ Bronze" />
+                                </div>
+                            </a>
+                            
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong judul-potong">Power Supply 650W 80+ Bronze</h5>
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 480.000</p>
+                                
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">
+                                    Daya stabil dan efisien untuk melindungi seluruh komponen komputer kamu
+                                </p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/Liquid Cooling.png" alt="CPU Cooler RGB Aurora Silent" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">CPU Cooler RGB Aurora Silent</h5>
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 320.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Desain stylish dengan pencahayaan RGB dan sistem pendinginan senyap</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">Monitor Gaming</h5> 
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 3.500.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Monitor refresh rate tinggi untuk pengalaman gaming yang mulus.</p> 
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">Monitor Gaming</h5> 
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 3.500.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Monitor refresh rate tinggi untuk pengalaman gaming yang mulus.</p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-1/4 h-auto snap-center item"> 
+                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <a href="#">
+                                <div class="h-[210px] w-full bg-white flex items-center justify-center">
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
+                                </div>
+                            </a>
+                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                <h5 class="mb-1 text-base font-bold judul-potong">Monitor Gaming</h5> 
+                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 3.500.000</p>
+                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Monitor refresh rate tinggi untuk pengalaman gaming yang mulus.</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- FAQ dan QNA -->
     <section>
@@ -449,15 +525,15 @@
                         <h2 class="text-left font-extrabold text-4xl">KEBUTUHAN PC MU !</h2>
                     </div>
 
-                    <div class="flex flex-col mt-5 gap-y-4">
+                    <div class="flex flex-col mt-5 gap-y-">
                         
                         <div class="flex flex-row items-start">
                             <img class="w-12 mr-4 shrink-0" src="./assets/images/Location.png" alt="">
                             
                             <div>
-                                <p class="text-left text-3xl">Jl. Ciwaru Raya No. RT04/16,</p>   
-                                <p class="text-left text-3xl">Cipare, Kec. Serang, Kota Serang,</p>
-                                <p class="text-left text-3xl">Banten 42117</p>
+                                <p class="text-left text-2xl">Jl. Ciwaru Raya No. RT04/16,</p>   
+                                <p class="text-left text-2xl">Cipare, Kec. Serang, Kota Serang,</p>
+                                <p class="text-left text-2xl">Banten 42117</p>
                             </div>
                         </div>
 
@@ -465,7 +541,7 @@
                             <img class="w-12 mr-4 shrink-0" src="./assets/images/WhatsApp.png" alt="">
                             
                             <div>
-                                <p class="text-left font-bold text-3xl">0856-9226-1460</p>
+                                <p class="text-left font-bold text-2xl">0856-9226-1460</p>
                             </div>
                         </div>
 
@@ -513,6 +589,30 @@
         </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+</script>
 
 
 </body>
