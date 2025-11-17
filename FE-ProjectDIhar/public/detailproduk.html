@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* CSS KUSTOM UNTUK PEMOTONGAN TEKS */
+        .deskripsi-potong {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis; 
+        }
+        .judul-potong {
+            overflow: hidden;
+            white-space: nowrap; 
+            text-overflow: ellipsis; 
+        }
+    </style>
+</head>
+
+<body class="font-[Roboto]">
+    <header class="bg-slate-700">
+        <!-- Navbar -->
+        <nav class="flex flex-row justify-between place-items-center w-[92%] mx-auto">
+            
+            <!-- Div Logo -->
+            <div class="m-3">
+                <img class="w-32" src="../public/assets/images/logoratu 4.png" alt="Logo">
+            </div>
+
+            <!-- Div Search Bar -->
+             <div class="w-xl">
+                <form class="w-full" action="/search" method="GET">
+                    <label for="search-input"></label>
+                    <input class="rounded-lg w-full" type="search" id="search-input" name="q" placeholder="Cari Disini...">
+                </form>
+             </div>
+
+            <!-- Div Icon Sebelah Kanan -->
+            <div>
+                <!-- List item -->
+                <ul class="flex flex-row gap-x-10 place-items-center">
+
+                  <!--Profil-->
+                    <li>
+                        <a href="#">
+                            <img class="w-14 h-13" src="../public/assets/images/ig.png" alt="Profil">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+  
+        </nav>
+    </header>
+
+    <main class="bg-gray-50 pt-8 pb-12">
+        <div class="max-w-screen-xl mx-auto px-4 space-y-10">
+
+            <h2 class="text-2xl font-bold text-gray-900 pt-4">Detail Produk</h2> 
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg flex gap-8">
+                
+                <div class="w-1/3 flex flex-col items-center">
+                    <div class="product-main-img border border-gray-200 rounded-lg p-4 mb-4 flex items-center justify-center bg-white">
+                        <img id="main-product-image" class="w-full max-h-72 object-contain" src="./assets/images/PNY-GTX-1660.png" alt="PNY GeForce GTX 1660 Super 6GB">
+                    </div>
+                    <div class="flex gap-3 justify-center">
+                        <div class="thumbnail border-2 border-slate-700 w-16 h-16 p-1 rounded-md cursor-pointer" data-large-image="./assets/images/PNY-GTX-1660.png">
+                            <img src="./assets/images/thumbnail1.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail border border-gray-300 w-16 h-16 p-1 rounded-md cursor-pointer opacity-50 hover:opacity-100" data-large-image="./assets/images/PNY-GTX-1660-varian2.png"> 
+                            <img src="./assets/images/thumbnail2.png" alt="Thumbnail 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/2">
+                    <div class="flex items-center justify-between mb-2">
+    <h1 id="product-title" class="text-2xl font-bold text-gray-900 judul-potong mr-4">PNY GeForce GTX 1660 Super 6GB</h1>
+    
+    <button id="copy-title-btn" 
+            class="text-slate-700 hover:text-blue-600 focus:outline-none text-sm transition duration-150">
+        <i class="fas fa-copy"></i>
+    </button>
+</div>
+
+<p class="text-3xl font-extrabold text-red-600 mb-6 border-b pb-4">Rp1.200.000</p>
+                    
+                    <div class="text-sm text-gray-700 space-y-2">
+                        <p class="text-base font-semibold">Brand/Manufacturer: <span class="font-normal text-slate-700">PNY</span></p>
+                        <p class="text-base font-semibold">Katalog: <span class="font-normal text-slate-700">VGA</span></p>
+                        <p>GeForce GTX 1660 Super 6GB 192bit, keluaran PNY</p>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>Sudah memiliki resolusi 4K</li>
+                            <li>Support untuk memasang 3 monitor</li>
+                            <li>Silent mode</li>
+                        </ul>
+                        
+                        <div class="text-xs text-gray-600 leading-snug space-y-1.5">
+                            <p><span class="font-bold">PNY Part Number:</span> VCG16606DFPRPB</p>
+                            <p><span class="font-bold">UPC Code:</span> 751492632827</p>
+                            <p class="underline cursor-pointer text-slate-700 font-bold">Lihat Selengkapnya</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <div class="cta-card border border-gray-300 rounded-lg p-5 shadow-sm bg-gray-50">
+                        <h4 class="text-base font-semibold text-gray-900 mb-3 judul-potong">PNY GeForce GTX 1660 Super 6GB</h4>
+                        
+                        <p class="text-xs text-gray-500 line-through">Rp1.300.000</p>
+                        
+                        <div class="flex items-center space-x-3 mb-5 mt-2">
+                            <label for="quantity" class="text-sm text-gray-700">Jumlah:</label>
+                            <input type="number" id="quantity" value="1" min="1" class="w-16 p-1 border border-gray-400 rounded-md text-center text-sm">
+                            <span class="text-sm text-gray-600">Stok: 5</span>
+                        </div>
+
+                        <button class="w-full p-2.5 mb-3 rounded-lg font-bold bg-green-500 text-white hover:bg-green-600 transition duration-150">Beli Langsung</button>                        
+                        <div class="flex justify-between mt-5 text-sm text-slate-700 border-t pt-3">
+                            <a href="#" class="flex items-center hover:text-red-500">
+                                <span>Tanya</span> 
+                            </a>
+                            <a href="#" class="flex items-center hover:text-red-500">
+                                <span>Share</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Ulasan Produk (1)</h2>
+                <div class="review-item border border-gray-200 rounded-lg p-4 bg-gray-50">
+                    <p class="font-semibold text-sm text-gray-800 mb-1">Ricky Bernardo</p>
+                    <p class="text-gray-600 text-sm">Baguss banget ngeboost fps aku dari 0 ke 1000000</p>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold text-gray-900">Lainnya dalam Katalog</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                        <img class="w-full h-32 object-contain p-2" src="./assets/images/PNY-GTX-1660-thumb.png" alt="Produk Sejenis">
+                        <div class="p-3 text-center bg-gray-50">
+                            <p class="text-sm font-semibold text-gray-800 judul-potong">PNY GTX 1660 Super 6GB</p>
+                            <p class="text-base font-bold text-red-600 mb-1">Rp1.200.000</p>
+                            <a href="#" class="text-xs text-slate-700 hover:underline">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+$(document).ready(function() {
+
+    // VARIABEL GLOBAL (untuk menyimpan ikon copy asli)
+    let originalCopyIconHtml = $('#copy-title-btn').html();
+    
+    // --- FUNGSI 1: MENGGANTI GAMBAR THUMBNAIL ---
+    $('.thumbnail').on('click', function() {
+        var newImageSrc = $(this).data('large-image');
+        $('#main-product-image').attr('src', newImageSrc);
+        
+        // Logika untuk highlight thumbnail yang sedang aktif
+        $('.thumbnail').removeClass('border-2 border-slate-700 opacity-100')
+                       .addClass('border border-gray-300 opacity-50 hover:opacity-100');
+                       
+        $(this).removeClass('border border-gray-300 opacity-50 hover:opacity-100')
+               .addClass('border-2 border-slate-700 opacity-100');
+    });
+
+
+    // --- FUNGSI 2: MENYALIN JUDUL PRODUK ---
+    $('#copy-title-btn').on('click', function() {
+        const titleText = $('#product-title').text();
+        
+        // Menggunakan Clipboard API untuk menyalin teks
+        navigator.clipboard.writeText(titleText)
+            .then(() => {
+                // Memberikan feedback visual: Simpan ikon asli dan ganti dengan ikon centang
+                originalCopyIconHtml = $(this).html(); // Pastikan ikon asli tersimpan
+                $(this).html('<i class="fas fa-check text-green-500"></i>');
+                
+                // Kembalikan ikon setelah 1.5 detik
+                setTimeout(() => {
+                    $(this).html(originalCopyIconHtml);
+                }, 1500);
+            })
+            .catch(err => {
+                console.error('Gagal menyalin: ', err);
+                alert('Gagal menyalin teks. Browser mungkin tidak mendukung Clipboard API.');
+            });
+    });
+
+});
+</script>
+        
+</body>
+</html>

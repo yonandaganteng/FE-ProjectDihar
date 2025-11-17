@@ -51,12 +51,12 @@
             <!-- Div Icon Sebelah Kanan -->
             <div>
                 <!-- List item -->
-                <ul class="flex flex-row gap-x-8 place-items-center">
+                <ul class="flex flex-row gap-x-10 place-items-center">
 
                   <!--Profil-->
                     <li>
                         <a href="#">
-                            <img class="w-10 h-10" src="../public/assets/images/Profile.png" alt="Profil">
+                            <img class="w-14 h-13" src="../public/assets/images/ig.png" alt="Profil">
                         </a>
                     </li>
                 </ul>
@@ -438,11 +438,13 @@
                     </div>
                 </div>
                 
-                <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
+                <button id="next-slide-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 
+    bg-slate-700 text-white p-3 rounded-full shadow-lg 
+    hover:bg-slate-800 transition duration-150 cursor-pointer z-10"> 
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+</button>
             </div>
         </div>
     </section>
@@ -612,6 +614,44 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+$(document).ready(function(){
+    
+    // Inisialisasi Owl Carousel Anda (sudah ada di kode Anda)
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
+    });
+
+    // BARU: Event Listener untuk tombol kustom
+    $('#next-slide-btn').click(function() {
+        // Panggil metode 'next' pada Owl Carousel
+        owl.trigger('next.owl.carousel');
+    });
+
+    // Jika Anda juga memiliki tombol panah kiri (prev):
+    // $('#prev-slide-btn').click(function() {
+    //     owl.trigger('prev.owl.carousel');
+    // });
+})
+
 </script>
 
 
