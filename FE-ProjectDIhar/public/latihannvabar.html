@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -90,7 +90,7 @@
                     <li>
                         <div class="flex flex-row place-items-center gap-x-2.5">
                             <img class="w-8" src="../public/assets/images/Katalog.png" alt="Katalog">
-                            <P class="text-2xl"><a href=""></a>Katalog</P>
+                            <P class="text-2xl"><a href="#katalog">Katalog</a></P>
                         </div>
                     </li>
 
@@ -98,7 +98,7 @@
                     <li>
                         <div class="flex flex-row place-items-center gap-x-2.5">
                             <img class="w-8" src="../public/assets/images/Popular.png" alt="Popular">
-                            <P class="text-2xl"><a href=""></a>Popular</P>
+                            <P class="text-2xl"><a href="#popular">Popular</a></P>
                         </div>
                     </li>
 
@@ -106,7 +106,7 @@
                     <li>
                         <div class="flex flex-row place-items-center gap-x-2.5">
                             <img class="w-8" src="../public/assets/images/RakitPC.png" alt="Rakit PC">
-                            <P class="text-2xl"><a href=""></a>Rakit PC</P>
+                            <P class="text-2xl"><a href="#rakitpc">Rakit PC</a></P>
                         </div class="flex flex-row">
                     </li>
 
@@ -114,7 +114,7 @@
                     <li>
                         <div class="flex flex-row place-items-center gap-x-2.5">
                             <img class="w-8" src="../public/assets/images/Konsultasi.png" alt="Konsultasi">
-                            <P class="text-2xl"><a href=""></a>Konsultasi</P>
+                            <P class="text-2xl"><a href="#konsultasi">Konsultasi</a></P>
                         </div>
                     </li>
 
@@ -122,7 +122,7 @@
                     <li>
                         <div class="flex flex-row place-items-center gap-x-2.5">
                             <img class="w-8" src="../public/assets/images/Kontak.png" alt="Kontak">
-                            <P class="text-2xl"><a href="">Kontak</a></P>
+                            <P class="text-2xl"><a href="#kontak">Kontak</a></P>
                         </div>
                     </li>
                 </ul>
@@ -169,18 +169,18 @@
     </div>
 
     <!-- Katalog Icons -->
-    <section name="katalog-icons">
+    <section name="katalog-icons" class="bg-slate-700 py-16">
 
         <!-- Background biru tua -->
 
-        <div class="bg-slate-700">
+
 
             <!-- Bagian Atas  -->
             <div class="flex flex-row text-white place-items-center justify-betwen">
 
                 <!-- Teks Katalog -->
 
-                <div class="flex flex-row text-white place-items-center m-2.5 w-full ">
+                <div class="flex flex-row text-white place-items-center m-2.5 w-full " id="katalog">
                     <img class="w-16" src="../public/assets/images/catalogwhite.png" alt="Katalog">
                     <h2 class="text-4xl font-extrabold mr-2.5">KATALOG</h2>
                     <h2 class="text-4xl font-extrabold mr-5 self-center">|</h2>
@@ -239,14 +239,13 @@
 
             </div>
 
-        </div>
     </section>
 
     <!-- Section Popular -->
-    <section>
+    <section  class="bg-slate-100 py-16">
 
         <!-- Popular Wrapper -->
-        <div class="bg-slate-100 flex flex-col">
+        <div class="bg-slate-100 flex flex-col" id="popular">
 
             <!-- Bagian Atas  -->
             <div class="flex flex-row text-white place-items-center justify-betwen">
@@ -292,7 +291,7 @@
 
     <!-- Section Simulasi Rakit PC -->
 
-    <section class="bg-slate-700 min-h-screen flex items-center">
+    <section class="bg-slate-700 min-h-screen flex items-center" id="rakitpc">
         <div class="gap-8 items-center px-16 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2">
 
             <div class="mt-4 md:mt-0 flex flex-col justify-center">
@@ -486,7 +485,7 @@
     <!-- FAQ dan QNA -->
     <section>
         <!-- Wrapper -->
-        <div class="bg-slate-100 grid grid-cols-2">
+        <div class="bg-slate-100 grid grid-cols-2" id="konsultasi">
 
             <!-- Kiri -->
             <div class="flex flex-col justify-center items-center m-12">
@@ -545,29 +544,26 @@
     </section>
 
     <!-- Alamat -->
-
-    <section>
-        <!-- Wrapper -->
-        <div class="grid grid-cols-2 bg-slate-100">
-            <!-- Maps Kiri -->
-            <div class="flex flex-cols-2 justify-center items-center">
+<section>
+        <div class="grid grid-cols-1 md:grid-cols-2 bg-slate-100" id="kontak">
+            
+            <div class="w-full h-full">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.032252552812!2d106.1645083!3d-6.126362199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41f5255b895725%3A0xc22172dcd7ef4a8!2sRatu%20Computer!5e0!3m2!1sid!2sid!4v1761474033426!5m2!1sid!2sid"
-                    class="w-3xl h-96 rounded-lg shadow-xl m-10" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="w-full h-full min-h-[400px]" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <!-- Alamat Kanan (Text) -->
-            <div class="flex flex-col justify-center text-slate-700 ml-8">
-                <div>
+            <div class="flex flex-col justify-center text-slate-700 p-10"> <div>
                     <div>
                         <h2 class="text-left font-extrabold text-4xl">RATU COMPUTER SOLUSI</h2>
                         <h2 class="text-left font-extrabold text-4xl">KEBUTUHAN PC MU !</h2>
                     </div>
 
-                    <div class="flex flex-col mt-5 gap-y-">
-
-                        <div class="flex flex-row items-start">
+                    <div class="flex flex-col mt-8 gap-y-4"> <div class="flex flex-row items-start">
                             <img class="w-12 mr-4 shrink-0" src="./assets/images/Location.png" alt="">
 
                             <div>
