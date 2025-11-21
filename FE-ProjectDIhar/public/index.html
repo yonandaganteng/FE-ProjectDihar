@@ -4,29 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
     <style>
-        .deskripsi-potong {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-        }
-
-        .judul-potong {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-        
         /* Fix untuk Navbar Sticky */
         header {
             position: sticky;
@@ -34,39 +23,50 @@
             z-index: 50;
         }
     </style>
+    <title>Homepage - Ratu Komputer</title>
 </head>
 
 <body class="font-[Roboto]">
 
     <header class="bg-slate-700 shadow-lg">
-        
+
         <div class="w-[92%] mx-auto py-3 flex flex-wrap items-center justify-between">
-            
+
             <a href="#" class="flex items-center">
                 <img class="w-24 md:w-32" src="../public/assets/images/logoratu 4.png" alt="Logo">
             </a>
 
-            <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
+            <button id="menu-toggle" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-gray-200">
                 <span class="sr-only">Open main menu</span>
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
 
-            <div class="hidden w-full md:flex md:w-auto md:order-1 md:flex-row md:items-center md:flex-grow md:justify-end gap-6" id="navbar-sticky">
-                
+            <div class="hidden w-full md:flex md:w-auto md:order-1 md:flex-row md:items-center md:flex-grow md:justify-end gap-6"
+                id="navbar-sticky">
+
                 <div class="w-full md:w-[500px] mt-4 md:mt-0 mx-auto">
                     <form class="w-full" action="/search" method="GET">
-                        <input class="rounded-lg w-full text-black px-4 py-2" type="search" id="search-input" name="q" placeholder="Cari Disini...">
+                        <div class="relative w-full">
+                            <input
+                                class="rounded-lg w-full text-black px-4 py-2 pr-12 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                type="search" id="search-input" name="q" placeholder="Cari Disini...">
+
+                            <button type="submit"
+                                class="absolute top-0 right-0 h-full px-4 text-gray-500 flex items-center justify-center hover:text-slate-700 rounded-r-lg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
 
-                <div class="mt-4 md:mt-0 flex justify-center md:justify-start">
-                    <a href="https://www.instagram.com/ratu.computer/" target="_blank">
-                        <img class="w-10 h-10 object-contain hover:opacity-80 transition" src="../public/assets/images/ig.png" alt="Instagram">
+                <div class="flex-shrink-0 text-2xl ">
+                    <a href="simulasi.html" target="_blank" class="inline-block animate-bounce font-bold text-white">
+                        <i class="fa-solid fa-computer"></i> Rakit PC!
                     </a>
                 </div>
 
-                 <div class="md:hidden mt-4 border-t border-slate-600 pt-4">
-                    <p class="text-white font-bold mb-2">Kategori:</p>
+                <div class="md:hidden mt-4 border-t border-slate-600 pt-4">
                     <ul class="flex flex-col gap-3 text-white">
                         <li><a href="#katalog" class="block hover:text-gray-300">Katalog</a></li>
                         <li><a href="#popular" class="block hover:text-gray-300">Popular</a></li>
@@ -74,7 +74,7 @@
                         <li><a href="#konsultasi" class="block hover:text-gray-300">Konsultasi</a></li>
                         <li><a href="#kontak" class="block hover:text-gray-300">Kontak</a></li>
                     </ul>
-                 </div>
+                </div>
             </div>
         </div>
 
@@ -130,11 +130,12 @@
     </section>
     <section name="katalog-icons" class="bg-slate-700 py-16" id="katalog">
         <div class="w-[90%] mx-auto">
-            
-            <div class="flex flex-col md:flex-row text-white items-center justify-center md:justify-start mb-8 gap-4 text-center md:text-left">
+
+            <div
+                class="flex flex-col md:flex-row text-white items-center justify-center md:justify-start mb-8 gap-4 text-center md:text-left">
                 <div class="flex flex-row items-center gap-2.5">
                     <img class="w-12 md:w-16" src="../public/assets/images/catalogwhite.png" alt="Katalog">
-                    <h2 class="text-3xl md:text-4xl font-extrabold">KATALOG</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">KATEGORI PRODUK</h2>
                 </div>
                 <h2 class="hidden md:block text-4xl font-extrabold mx-2">|</h2>
                 <p class="text-sm md:text-xl font-extrabold max-w-lg">
@@ -143,63 +144,64 @@
             </div>
 
             <div class="w-[90%] mx-auto">
-            <div class="owl-carousel owl-theme" id="katalog-carousel">
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/cpuicon.png" alt="CPU">
-                        <p class="text-white mt-2">CPU</p>
-                    </a>
-                </div>
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/monitoricon.png" alt="Monitor">
-                        <p class="text-white mt-2">Monitor</p>
-                    </a>
-                </div>
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/ramicon.png" alt="RAM">
-                        <p class="text-white mt-2">RAM</p>
-                    </a>
-                </div>
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/laptopicon.png" alt="Laptop">
-                        <p class="text-white mt-2">Laptop</p>
-                    </a>
-                </div>
-                 <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/GPU.png" alt="GPU">
-                        <p class="text-white mt-2">VGA</p>
-                    </a>
-                </div>
-                 <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Keyboard.png" alt="Keyboard">
-                        <p class="text-white mt-2">Keyboard</p>
-                    </a>
-                </div>
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Peripherals.png" alt="Peripherals">
-                        <p class="text-white mt-2">Peripheral</p>
-                    </a>
-                </div>
-                <div class="item text-center">
-                    <a href="#" class="block hover:scale-90 transition duration-300">
-                        <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Mouse.png" alt="Mouse">
-                        <p class="text-white mt-2">Mouse</p>
-                    </a>
+                <div class="owl-carousel owl-theme" id="katalog-carousel">
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/cpuicon.png" alt="CPU">
+                            <p class="text-white mt-2">CPU</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/monitoricon.png" alt="Monitor">
+                            <p class="text-white mt-2">Monitor</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/ramicon.png" alt="RAM">
+                            <p class="text-white mt-2">RAM</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/laptopicon.png" alt="Laptop">
+                            <p class="text-white mt-2">Laptop</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/GPU.png" alt="GPU">
+                            <p class="text-white mt-2">VGA</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Keyboard.png" alt="Keyboard">
+                            <p class="text-white mt-2">Keyboard</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Peripherals.png" alt="Peripherals">
+                            <p class="text-white mt-2">Peripheral</p>
+                        </a>
+                    </div>
+                    <div class="item text-center">
+                        <a href="#" class="block hover:scale-90 transition duration-300">
+                            <img class="mx-auto !w-16 md:!w-24" src="./assets/images/Mouse.png" alt="Mouse">
+                            <p class="text-white mt-2">Mouse</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="bg-slate-100 py-16" id="popular">
         <div class="w-[90%] mx-auto flex flex-col">
 
-            <div class="flex flex-col md:flex-row text-slate-700 items-center justify-center md:justify-start mb-8 gap-4 text-center md:text-left">
+            <div
+                class="flex flex-col md:flex-row text-slate-700 items-center justify-center md:justify-start mb-8 gap-4 text-center md:text-left">
                 <div class="flex flex-row items-center gap-2.5">
                     <img class="w-12 md:w-16" src="../public/assets/images/Popular.png" alt="Popular">
                     <h2 class="text-3xl md:text-4xl font-extrabold">POPULAR</h2>
@@ -214,14 +216,17 @@
             <div class="flex flex-col md:flex-row place-items-center justify-around gap-10">
                 <div class="flex flex-col place-items-center justify-items-center">
                     <a href="http://" target="_blank">
-                        <img class="w-full md:w-xl h-auto justify-items-center mb-5 hover:scale-95 transition duration-300" src="./assets/images/promo1.png" alt="">
+                        <img class="w-full md:w-xl h-auto justify-items-center mb-5 hover:scale-95 transition duration-300"
+                            src="./assets/images/promo1.png" alt="">
                     </a>
                     <p class="text-2xl md:text-3xl font-extrabold mr-2.5 text-slate-700 text-center">PRODUK TERLARIS</p>
                 </div>
 
                 <div class="flex flex-col place-items-center justify-items-center">
-                    <img class="w-full md:w-xl h-auto justify-items-center mb-5 hover:scale-95 transition duration-300" src="./assets/images/promo2.png" alt="">
-                    <p class="text-2xl md:text-3xl font-extrabold mr-2.5 text-slate-700 text-center">PRODUK SPESIAL PROMO</p>
+                    <img class="w-full md:w-xl h-auto justify-items-center mb-5 hover:scale-95 transition duration-300"
+                        src="./assets/images/promo2.png" alt="">
+                    <p class="text-2xl md:text-3xl font-extrabold mr-2.5 text-slate-700 text-center">PRODUK SPESIAL
+                        PROMO</p>
                 </div>
             </div>
         </div>
@@ -242,14 +247,16 @@
                     <h5 class="mb-6 text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
                         Coba Sekarang!
                     </h5>
-                    <a href="#" class="inline-flex items-center px-6 py-3 text-xl font-bold text-white bg-slate-700 rounded-lg hover:bg-slate-500 transition duration-300">
+                    <a href="simulasi.html"
+                        class="inline-flex items-center px-6 py-3 text-xl font-bold text-white bg-slate-700 rounded-lg hover:bg-slate-500 transition duration-300">
                         <i class="fa-solid fa-arrow-pointer m-2"></i> Klik Disini
                     </a>
                 </div>
             </div>
 
             <div class="w-full h-full order-2">
-                <img class="w-full h-full object-cover rounded-lg shadow-2xl" src="../public/assets/images/fotopc.png" alt="PC Rakitan">
+                <img class="w-full h-full object-cover rounded-lg shadow-2xl" src="../public/assets/images/fotopc.png"
+                    alt="PC Rakitan">
             </div>
 
         </div>
@@ -258,7 +265,8 @@
         <div class="max-w-screen-xl mx-auto px-4">
 
             <div class="flex flex-col md:flex-row items-center md:items-start mb-8 text-center md:text-left gap-4">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mr-4 whitespace-nowrap">REKOMENDASI LAINNYA</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mr-4 whitespace-nowrap">REKOMENDASI LAINNYA
+                </h2>
                 <span class="hidden md:block text-4xl font-extrabold text-slate-700 mr-4">|</span>
                 <p class="text-sm md:text-xl font-extrabold text-slate-700 leading-tight">
                     Cek produk rekomendasi dari Ratu Komputer yang siap bantu PC kamu makin cepat, kuat, dan awet!
@@ -266,83 +274,95 @@
             </div>
 
             <div class="relative">
-                <div id="rekomendasi-carousel" class="owl-carousel owl-theme" style="-ms-overflow-style: none; scrollbar-width: none;">
-                    
+                <div id="rekomendasi-carousel" class="owl-carousel owl-theme"
+                    style="-ms-overflow-style: none; scrollbar-width: none;">
+
                     <div class="item p-2 hover:scale-95 transition duration-300">
                         <a href="#">
-                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                            
+                            <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+
                                 <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png" alt="RAM 8GB DDR4" />
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/RAM.png"
+                                        alt="RAM 8GB DDR4" />
                                 </div>
-                            
-                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start ">
-                                <h5 class="mb-1 text-base font-bold judul-potong">RAM 8GB DDR4</h5>
-                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 50.000</p>
-                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">RAM 8GB DDR4 untuk meningkatkan performa dalam multitasking</p>
+
+                                <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start ">
+                                    <h5 class="mb-1 text-base font-bold judul-potong">RAM 8GB DDR4</h5>
+                                    <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 50.000</p>
+                                    <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">RAM 8GB
+                                        DDR4 untuk meningkatkan performa dalam multitasking</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="item p-2 hover:scale-95 transition duration-300">
                         <a href="#">
-                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                            
+                            <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+
                                 <div class="h-[210px] w-full bg-white flex items-center justify-center">
                                     <img class="w-4/5 h-auto object-contain" src="./assets/images/SSD.png" alt="SSD" />
                                 </div>
-                            
-                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                                <h5 class="mb-1 text-base font-bold judul-potong">SSD 512 GB NVMe Gen4</h5>
-                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 490.000</p>
-                                <p class="text-xs font-normal text-gray-300 leading-snug overflow-hidden h-8">Rasakan kecepatan boot dan loading super cepat.</p>
+
+                                <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                    <h5 class="mb-1 text-base font-bold judul-potong">SSD 512 GB NVMe Gen4</h5>
+                                    <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 490.000
+                                    </p>
+                                    <p class="text-xs font-normal text-gray-300 leading-snug overflow-hidden h-8">
+                                        Rasakan kecepatan boot dan loading super cepat.</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
-                     <div class="item p-2 hover:scale-95 transition duration-300">
+                    <div class="item p-2 hover:scale-95 transition duration-300">
                         <a href="#">
-                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                            
+                            <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+
                                 <div class="h-[210px] w-full bg-white flex items-center justify-center">
                                     <img class="w-4/5 h-auto object-contain" src="./assets/images/PSU.png" alt="PSU" />
                                 </div>
-                            
-                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                                <h5 class="mb-1 text-base font-bold judul-potong">Power Supply 650W 80+ Bronze</h5>
-                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 480.000</p>
-                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Daya stabil dan efisien untuk melindungi seluruh komponen.</p>
+
+                                <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                    <h5 class="mb-1 text-base font-bold judul-potong">Power Supply 650W 80+ Bronze</h5>
+                                    <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 480.000
+                                    </p>
+                                    <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Daya
+                                        stabil dan efisien untuk melindungi seluruh komponen.</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
-                     <div class="item p-2 hover:scale-95 transition duration-300">
+                    <div class="item p-2 hover:scale-95 transition duration-300">
                         <a href="#">
-                        <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
-                            
+                            <div class="h-[430px] bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+
                                 <div class="h-[210px] w-full bg-white flex items-center justify-center">
-                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/Liquid Cooling.png" alt="Cooler" />
+                                    <img class="w-4/5 h-auto object-contain" src="./assets/images/Liquid Cooling.png"
+                                        alt="Cooler" />
                                 </div>
-             
-                            <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
-                                <h5 class="mb-1 text-base font-bold judul-potong">CPU Cooler RGB Aurora Silent</h5>
-                                <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 320.000</p>
-                                <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Desain stylish dengan pencahayaan RGB.</p>
+
+                                <div class="h-[220px] bg-slate-700 p-4 text-white flex flex-col justify-start">
+                                    <h5 class="mb-1 text-base font-bold judul-potong">CPU Cooler RGB Aurora Silent</h5>
+                                    <p class="mb-3 text-2xl font-extrabold leading-none whitespace-nowrap">Rp 320.000
+                                    </p>
+                                    <p class="text-xs font-normal text-gray-300 leading-snug deskripsi-potong">Desain
+                                        stylish dengan pencahayaan RGB.</p>
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                 </div>
 
                 <div class="absolute inset-0 flex items-center justify-between pointer-events-none">
-                    <button id="prev-slide-btn" class="pointer-events-auto transform -translate-x-2 md:-translate-x-8 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer z-10">
+                    <button id="prev-slide-btn"
+                        class="pointer-events-auto transform -translate-x-2 md:-translate-x-8 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer z-10">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button id="next-slide-btn" class="pointer-events-auto transform translate-x-2 md:translate-x-8 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer z-10">
+                    <button id="next-slide-btn"
+                        class="pointer-events-auto transform translate-x-2 md:translate-x-8 bg-slate-700 text-white p-3 rounded-full shadow-lg hover:bg-slate-800 transition duration-150 cursor-pointer z-10">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
@@ -356,15 +376,32 @@
                     <img class="w-16 m-1 mb-4 md:mb-0" src="../public/assets/images/qmark.png" alt="QMark">
                     <div>
                         <p class="text-2xl md:text-4xl font-extrabold mr-0 md:mr-10 self-center">Kenapa Pelanggan</p>
-                        <p class="text-2xl md:text-4xl font-extrabold mr-0 md:mr-10 self-center">Percaya Ratu Komputer?</p>
+                        <p class="text-2xl md:text-4xl font-extrabold mr-0 md:mr-10 self-center">Percaya Ratu Komputer?
+                        </p>
                     </div>
                 </div>
                 <div>
                     <ul class="text-white w-full md:w-xl space-y-4">
-                        <li><div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left"><p>✅ Produk Lengkap & Original</p></div></li>
-                        <li><div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left"><p>✅ Harga Bersahabat</p></div></li>
-                        <li><div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left"><p>✅ Konsultasi Langsung</p></div></li>
-                        <li><div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left"><p>✅ Terpercaya dan aman</p></div></li>
+                        <li>
+                            <div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left">
+                                <p>✅ Produk Lengkap & Original</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left">
+                                <p>✅ Harga Bersahabat</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left">
+                                <p>✅ Konsultasi Langsung</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-xl md:text-2xl bg-slate-700 p-2 rounded-xl text-center md:text-left">
+                                <p>✅ Terpercaya dan aman</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -374,7 +411,8 @@
                     <p class="font-extrabold m-2.5">Butuh Konsultasi?</p>
                     <p class="font-extrabold m-2.5">Tanyakan Lebih Lanjut</p>
                     <p class="font-extrabold m-2.5">Tentang apa saja.</p>
-                    <a href="https://wa.me/6287773599434?text=Halo%20Ratu%20Komputer%2C%20saya%20ingin%20Konsultasi%2FBertanya." target="_blank"
+                    <a href="https://wa.me/6287773599434?text=Halo%20Ratu%20Komputer%2C%20saya%20ingin%20Konsultasi%2FBertanya."
+                        target="_blank"
                         class="inline-block focus:outline-none text-slate-700 bg-green-200 font-extrabold rounded-lg text-xl px-5 py-2.5 me-2 mb-5 m-5 hover:bg-[#25D366] transition duration-300">
                         <i class="fa-brands fa-whatsapp"></i> Whatsapp
                     </a>
@@ -386,7 +424,10 @@
     <section>
         <div class="grid grid-cols-1 md:grid-cols-2 bg-slate-100" id="kontak">
             <div class="w-full h-[300px] md:h-auto">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.032252552812!2d106.1645083!3d-6.126362199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41f5255b895725%3A0xc22172dcd7ef4a8!2sRatu%20Computer!5e0!3m2!1sid!2sid!4v1761474033426!5m2!1sid!2sid" class="w-full h-full min-h-[300px] md:min-h-[400px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.032252552812!2d106.1645083!3d-6.126362199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41f5255b895725%3A0xc22172dcd7ef4a8!2sRatu%20Computer!5e0!3m2!1sid!2sid!4v1761474033426!5m2!1sid!2sid"
+                    class="w-full h-full min-h-[300px] md:min-h-[400px]" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="flex flex-col justify-center text-slate-700 p-10">
@@ -405,7 +446,9 @@
                         </div>
                     </a>
 
-                    <a href="https://wa.me/6285692261460?text=Halo%20Ratu%20Komputer%2C%20saya%20ingin%20Konsultasi%2FBertanya." target="_blank" class="flex flex-row items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+                    <a href="https://wa.me/6285692261460?text=Halo%20Ratu%20Komputer%2C%20saya%20ingin%20Konsultasi%2FBertanya."
+                        target="_blank"
+                        class="flex flex-row items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
                         <img class="w-8 md:w-12 mr-4 shrink-0" src="./assets/images/WhatsApp.png" alt="WhatsApp Logo">
                         <div>
                             <p class="text-left font-bold text-lg md:text-2xl">0856-9226-1460</p>
@@ -423,15 +466,33 @@
                         <img src="../public/assets/images/logoratu 4.png" class="h-12 me-3" alt="Ratu Komputer Logo" />
                     </a>
                     <p class="text-sm text-gray-300">
-                        Toko komputer terpercaya dengan produk berkualitas dan pelayanan terbaik untuk kebutuhan teknologi Anda.
+                        Toko komputer terpercaya dengan produk berkualitas dan pelayanan terbaik untuk kebutuhan
+                        teknologi Anda.
                     </p>
                 </div>
                 <div class="grid gap-8 sm:gap-12 w-full md:w-auto justify-end">
                     <div>
                         <h2 class="mb-6 text-base font-bold uppercase text-white">Jam Operasional</h2>
                         <ul class="text-gray-300 space-y-1 text-sm">
-                            <li><p>Senin - Sabtu: 09:00 - 21:00</p></li>
-                            <li><p>Minggu: 10:00 - 18:00</p></li>
+                            <li>
+                                <p>Senin - Sabtu: 09:00 - 21:00</p>
+                            </li>
+                            <li>
+                                <p>Minggu: 10:00 - 18:00</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-base font-bold uppercase text-white">Media Sosial & Kontak</h2>
+                        <ul class="text-gray-300 space-y-1 text-sm hover:text-gray-100 transition">
+                            <li>
+                                <a href="https://www.instagram.com/ratu.computer/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> ratu.computer</a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/6285692261460?text=Halo%20Ratu%20Komputer." target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 0856-9226-1460</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -444,6 +505,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -451,7 +513,7 @@
         $(document).ready(function () {
 
             // Logic Hamburger Menu
-            $('#menu-toggle').click(function() {
+            $('#menu-toggle').click(function () {
                 $('#navbar-sticky').toggleClass('hidden');
             });
 
@@ -489,10 +551,10 @@
                 responsiveClass: true,
                 nav: false,
                 responsive: {
-                    0: { 
-                        items: 1, 
+                    0: {
+                        items: 1,
                         stagePadding: 30
-                    }, 
+                    },
                     600: { items: 2 },
                     1000: { items: 4 }
                 }
@@ -508,5 +570,6 @@
 
         })
     </script>
-    </body>
+</body>
+
 </html>

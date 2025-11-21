@@ -1,220 +1,530 @@
 <!doctype html>
-<html>
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link href="../src/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
     <style>
-        /* CSS KUSTOM UNTUK PEMOTONGAN TEKS */
-        .deskripsi-potong {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; 
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis; 
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
+
+        /* Judul Potong (Truncate Multi-line) jika kepanjangan */
         .judul-potong {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
             overflow: hidden;
-            white-space: nowrap; 
-            text-overflow: ellipsis; 
         }
     </style>
+    <title>PNY GeForce GTX 1660 Super - Ratu Komputer</title>
 </head>
 
-<body class="font-[Roboto]">
-    <header class="bg-slate-700">
-        <!-- Navbar -->
-        <nav class="flex flex-row justify-between place-items-center w-[92%] mx-auto">
-            
-            <!-- Div Logo -->
-            <div class="m-3">
-                <img class="w-32" src="../public/assets/images/logoratu 4.png" alt="Logo">
-            </div>
+<body class="font-[Roboto] bg-gray-50 text-gray-800">
 
-            <!-- Div Search Bar -->
-             <div class="w-xl">
-                <form class="w-full" action="/search" method="GET">
-                    <label for="search-input"></label>
-                    <input class="rounded-lg w-full" type="search" id="search-input" name="q" placeholder="Cari Disini...">
+    <header class="bg-slate-700 shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between gap-3 md:gap-6">
+
+            <a href="#" class="flex-shrink-0">
+                <img class="w-12 md:w-24 lg:w-32 transition-all" src="../public/assets/images/logoratu 4.png"
+                    alt="Logo">
+            </a>
+
+            <div class="flex-grow max-w-2xl">
+                <form action="/search" method="GET" class="w-full">
+                    <div class="relative">
+                        <input
+                            class="w-full rounded-lg text-black px-3 py-2 md:px-4 md:py-2.5 pr-10 text-sm md:text-base border-0 ring-1 ring-gray-300 focus:ring-2 focus:ring-blue-500 shadow-sm"
+                            type="search" id="search-input" name="q" placeholder="Cari produk...">
+                        <button type="submit"
+                            class="absolute right-0 top-0 h-full px-3 md:px-4 text-gray-500 hover:text-slate-700">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
                 </form>
-             </div>
-
-            <!-- Div Icon Sebelah Kanan -->
-            <div>
-                <!-- List item -->
-                <ul class="flex flex-row gap-x-10 place-items-center">
-
-                  <!--Profil-->
-                    <li>
-                        <a href="#">
-                            <img class="w-14 h-13" src="../public/assets/images/ig.png" alt="Profil">
-                        </a>
-                    </li>
-                </ul>
             </div>
-  
-        </nav>
+
+            <div class="flex-shrink-0 text-2xl ">
+                <a href="simulasi.html" target="_blank" class="inline-block animate-bounce font-bold text-white">
+                    <i class="fa-solid fa-computer"></i> Rakit PC!
+                </a>
+            </div>
+
+        </div>
     </header>
 
-    <main class="bg-gray-50 pt-8 pb-12">
-        <div class="max-w-screen-xl mx-auto px-4 space-y-10">
+    <main class="py-6 md:py-10">
+        <div class="max-w-screen-xl mx-auto px-4 space-y-8">
 
-            <h2 class="text-2xl font-bold text-gray-900 pt-4">Detail Produk</h2> 
-            
-            <div class="bg-white p-6 rounded-xl shadow-lg flex gap-8">
-                
-                <div class="w-1/3 flex flex-col items-center">
-                    <div class="product-main-img border border-gray-200 rounded-lg p-4 mb-4 flex items-center justify-center bg-white">
-                        <img id="main-product-image" class="w-full max-h-72 object-contain" src="./assets/images/PNY-GTX-1660.png" alt="PNY GeForce GTX 1660 Super 6GB">
-                    </div>
-                    <div class="flex gap-3 justify-center">
-                        <div class="thumbnail border-2 border-slate-700 w-16 h-16 p-1 rounded-md cursor-pointer" data-large-image="./assets/images/PNY-GTX-1660.png">
-                            <img src="./assets/images/PNY-GTX-1660.png" alt="Thumbnail 1">
-                        </div>
-                        <div class="thumbnail border border-gray-300 w-16 h-16 p-1 rounded-md cursor-pointer opacity-50 hover:opacity-100" data-large-image="./assets/images/thumbnail2.png"> 
-                            <img src="./assets/images/thumbnail2.png" alt="Thumbnail 2">
+
+
+            <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-8 lg:gap-10">
+
+                <div class="w-full lg:w-4/12 flex flex-col items-center">
+                    <div class="relative group w-full">
+                        <input type="checkbox" id="mainimg" class="peer hidden">
+
+                        <label for="mainimg"
+                            class="block overflow-hidden rounded-lg border border-gray-200 cursor-pointer bg-white p-2">
+                            <img src="./assets/images/PNY-GTX-1660.png" alt="Main Product"
+                                class="w-full h-64 md:h-80 object-contain transition-transform duration-300 group-hover:scale-105">
+                        </label>
+
+                        <div
+                            class="hidden peer-checked:flex fixed inset-0 z-[9999] bg-black/90 justify-center items-center backdrop-blur-sm p-4 animate-fade-in">
+                            <label for="mainimg" class="absolute inset-0 cursor-zoom-out"></label>
+                            <div class="relative max-w-4xl w-full max-h-screen flex justify-center">
+                                <label for="mainimg"
+                                    class="absolute -top-10 right-0 text-white text-3xl cursor-pointer hover:text-red-500">&times;</label>
+                                <img src="./assets/images/PNY-GTX-1660.png"
+                                    class="max-w-full max-h-[90vh] rounded-lg object-contain">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-1/2">
-                    <div class="flex items-center justify-between mb-2">
-    <h1 id="product-title" class="text-2xl font-bold text-gray-900 judul-potong mr-4">PNY GeForce GTX 1660 Super 6GB</h1>
-    
-    <button id="copy-title-btn" 
-            class="text-slate-700 hover:text-blue-600 focus:outline-none text-sm transition duration-150">
-        <i class="fas fa-copy"></i>
-    </button>
-</div>
+                <div class="w-full lg:w-5/12 space-y-4">
 
-<p class="text-3xl font-extrabold text-red-600 mb-6 border-b pb-4">Rp1.200.000</p>
-                    
-                    <div class="text-sm text-gray-700 space-y-2">
-                        <p class="text-base font-semibold">Brand/Manufacturer: <span class="font-normal text-slate-700">PNY</span></p>
-                        <p class="text-base font-semibold">Katalog: <span class="font-normal text-slate-700">VGA</span></p>
-                        <p>GeForce GTX 1660 Super 6GB 192bit, keluaran PNY</p>
-                        <ul class="list-disc ml-5 space-y-1">
-                            <li>Sudah memiliki resolusi 4K</li>
-                            <li>Support untuk memasang 3 monitor</li>
-                            <li>Silent mode</li>
+                    <div class="flex items-start justify-between gap-2">
+                        <h1 id="product-title" class="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+                            PNY GeForce GTX 1660 Super 6GB
+                        </h1>
+
+                        <div class="flex gap-3 shrink-0">
+                            <button id="copy-title-btn" class="text-gray-500 hover:text-blue-600 transition"
+                                title="Copy Nama">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <a id="google-search-btn" href="#" target="_blank"
+                                class="text-gray-500 hover:text-blue-600 transition" title="Cari di Google">
+                                <i class="fa-brands fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p id="price" data-price="1200000"
+                        class="text-2xl md:text-3xl font-extrabold text-red-600 border-b pb-4">
+                        Rp1.200.000
+                    </p>
+
+                    <div class="text-sm md:text-base text-gray-700 space-y-2">
+                        <div class="grid grid-cols-2 gap-2">
+                            <p class="font-semibold">Kode: <span id="product-code"
+                                    class="font-normal text-slate-600">BRG230</span></p>
+                            <p class="font-semibold">Kategori: <span class="font-normal text-slate-600">VGA</span></p>
+                            <p class="font-semibold">Cabang: <span class="font-normal text-slate-600">Serang</span></p>
+                        </div>
+
+                        <p class="pt-2">GeForce GTX 1660 Super 6GB 192bit, keluaran PNY. Performa tinggi untuk gaming
+                            1080p.</p>
+                        <ul class="list-disc ml-5 text-gray-600 space-y-1">
+                            <li>Resolusi 4K Ready</li>
+                            <li>Support 3 Monitor</li>
+                            <li>Silent Mode Fan</li>
                         </ul>
-                        
-                        <div class="text-xs text-gray-600 leading-snug space-y-1.5">
-                            <p><span class="font-bold">PNY Part Number:</span> VCG16606DFPRPB</p>
-                            <p><span class="font-bold">UPC Code:</span> 751492632827</p>
-                            <p class="underline cursor-pointer text-slate-700 font-bold">Lihat Selengkapnya</p>
+
+                        <div class="text-xs text-gray-500 pt-3 border-t mt-3">
+                            <p>PNY Part: <span class="font-mono">VCG16606DFPRPB</span></p>
+                            <p>UPC Code: <span class="font-mono">751492632827</span></p>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-1/4">
-                    <div class="cta-card border border-gray-300 rounded-lg p-5 shadow-sm bg-gray-50">
-                        <h4 class="text-base font-semibold text-gray-900 mb-3 judul-potong">PNY GeForce GTX 1660 Super 6GB</h4>
-                        
-                        <p class="text-xs text-gray-500 line-through">Rp1.300.000</p>
-                        
-                        <div class="flex items-center space-x-3 mb-5 mt-2">
-                            <label for="quantity" class="text-sm text-gray-700">Jumlah:</label>
-                            <input type="number" id="quantity" value="1" min="1" class="w-16 p-1 border border-gray-400 rounded-md text-center text-sm">
-                            <span class="text-sm text-gray-600">Stok: 5</span>
+                <div class="w-full lg:w-3/12">
+                    <div class="border border-gray-200 rounded-xl p-5 shadow-sm bg-gray-50 sticky top-24">
+                        <h4 class="text-sm font-semibold text-gray-900 mb-3 truncate hidden lg:block">
+                            Ringkasan Belanja
+                        </h4>
+
+                        <p id="price-display" data-price="1200000"
+                            class="text-xl md:text-2xl font-bold text-red-600 mb-4">
+                            Rp1.200.000
+                        </p>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <label for="quantity" class="text-sm font-medium text-gray-700">Jumlah</label>
+                            <div class="flex items-center gap-2">
+                                <input type="number" id="quantity" value="1" min="1"
+                                    class="w-16 p-1.5 border border-gray-300 rounded-md text-center text-sm focus:ring-blue-500 focus:border-blue-500">
+                                <span class="text-xs text-gray-500">Stok <span id="stock-max"
+                                        class="font-bold">5</span></span>
+                            </div>
+                        </div>
+                        <p id="msg-error" class="text-xs text-red-500 text-right mb-2 hidden">Stok maksimal!</p>
+
+                        <div class="space-y-3">
+                            <button id="btn-buy"
+                                class="w-full py-2.5 rounded-lg font-bold bg-green-600 text-white hover:bg-green-700 transition shadow-md flex justify-center items-center gap-2">
+                                <i class="fa-brands fa-whatsapp"></i> Beli Sekarang
+                            </button>
+
+                            <button id="btn-ask"
+                                class="w-full py-2.5 rounded-lg font-bold bg-slate-700 text-white hover:bg-slate-600 transition shadow-md">
+                                Konsultasi Dulu
+                            </button>
                         </div>
 
-                        <button class="w-full p-2.5 mb-3 rounded-lg font-bold 
-    bg-green-500 text-white 
-    hover:bg-green-600 
-    transition duration-150 
-    cursor-pointer"> Beli Langsung
-</button>
-                        <div class="flex justify-between mt-5 text-sm text-slate-700 border-t pt-3">
-                            <a href="#" class="flex items-center hover:text-red-500">
-                                <span>Tanya</span> 
-                            </a>
-                            <a href="#" class="flex items-center hover:text-red-500">
-                                <span>Share</span>
-                            </a>
+                        <div class="mt-4 pt-4 border-t border-gray-200 flex justify-center">
+                            <button id="btn-copy"
+                                class="text-sm text-slate-500 hover:text-blue-600 flex items-center gap-2 transition">
+                                <i class="fa-solid fa-link"></i> <span id="text-copy">Salin Link Produk</span>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-                <h2 class="text-xl font-bold mb-6">Ulasan Produk (1)</h2>
-                <div class="review-item border border-gray-200 rounded-lg p-5 bg-gray-50">
-                    <p class="font-semibold text-sm text-gray-800 mb-1">Ricky Bernardo</p>
-                    <p class="text-gray-600 text-sm">Baguss banget ngeboost fps aku dari 0 ke 1000000</p>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg">
+                <h2 class="text-lg md:text-xl font-bold mb-4 md:mb-6">Gallery Produk</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+
+                    <div class="relative group">
+                        <input type="checkbox" id="img1" class="peer hidden">
+                        <label for="img1"
+                            class="block overflow-hidden rounded-lg border border-gray-200 cursor-pointer h-32 md:h-48">
+                            <img src="https://kkomputer.com/7174/pny-gtx-1660-super-6gb-xlr8-gddr6-192bit.jpg"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        </label>
+                        <div
+                            class="hidden peer-checked:flex fixed inset-0 z-[9999] bg-black/90 justify-center items-center backdrop-blur-sm p-4">
+                            <label for="img1" class="absolute inset-0 cursor-default"></label>
+                            <div class="relative max-w-4xl w-full">
+                                <label for="img1"
+                                    class="absolute -top-10 right-0 text-white text-3xl cursor-pointer">&times;</label>
+                                <img src="https://kkomputer.com/7174/pny-gtx-1660-super-6gb-xlr8-gddr6-192bit.jpg"
+                                    class="w-full max-h-[80vh] object-contain rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <input type="checkbox" id="img2" class="peer hidden">
+                        <label for="img2"
+                            class="block overflow-hidden rounded-lg border border-gray-200 cursor-pointer h-32 md:h-48">
+                            <img src="https://kkomputer.com/7174/pny-gtx-1660-super-6gb-xlr8-gddr6-192bit.jpg"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        </label>
+                        <div
+                            class="hidden peer-checked:flex fixed inset-0 z-[9999] bg-black/90 justify-center items-center backdrop-blur-sm p-4">
+                            <label for="img2" class="absolute inset-0 cursor-default"></label>
+                            <div class="relative max-w-4xl w-full">
+                                <label for="img2"
+                                    class="absolute -top-10 right-0 text-white text-3xl cursor-pointer">&times;</label>
+                                <img src="https://kkomputer.com/7174/pny-gtx-1660-super-6gb-xlr8-gddr6-192bit.jpg"
+                                    class="w-full max-h-[80vh] object-contain rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            
+
+
             <div class="space-y-4">
                 <h2 class="text-xl font-bold text-gray-900">Lainnya dalam Katalog</h2>
-                <div class="grid grid-cols-4 gap-6">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-                        <img class="w-full h-32 object-contain p-2" src="./assets/images/GTX1650.png" alt="Produk Sejenis">
-                        <div class="p-3 text-center bg-gray-50">
-                            <p class="text-sm font-semibold text-gray-800 judul-potong">VGA MSI GeForce GTX1650 4GB Ventus XS OC V3 DDR6</p>
-                            <p class="text-base font-bold text-red-600 mb-1">Rp2.500.000</p>
-                            <a href="#" class="text-xs text-slate-700 hover:underline">Lihat Selengkapnya</a>
+
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/Keyboard-Asus.png"
+                                    alt="Keyboard Asus">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">Keyboard Asus</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 250.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/Mouse-Galaxy.png"
+                                    alt="Mouse Galaxy">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">Mouse Galaxy</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 900.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/Liquid-Cooler.jpg"
+                                    alt="Liquid Cooler">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">Liquid Cooler</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 2.000.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/Vurrion-MV-Series.jpeg"
+                                    alt="Vurrion MV-Series">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">Vurrion MV-Series 400W</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 450.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/DDR4-RGB.jpg"
+                                    alt="DDR4 RGB 266 Mhz">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">DDR4 RGB 266 Mhz</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 250.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/NVME-PCIe.jpg"
+                                    alt="NVME PCIe Gen3 x 4">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">NVME PCIe Gen3 x 4</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 100.000</p>
+                                <p class="text-sm font-bold text-slate-700">Serang</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/Geforce-GTX.png"
+                                    alt="Geforce GTX">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">Geforce GTX</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 5.000.000</p>
+                                <p class="text-sm font-bold text-slate-700">Bogor</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg hover:scale-95 transition duration-300">
+                            <div class="bg-gray-800 h-32 flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="./assets/images/GEX.jpg" alt="GEX">
+                            </div>
+                            <div class="p-4 text-left">
+                                <p class="text-lg font-semibold text-gray-900 truncate">GEX</p>
+                                <p class="text-sm font-bold text-red-500 mt-3.5">Rp. 50.000</p>
+                                <p class="text-sm font-bold text-slate-700">Bogor</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
 
         </div>
     </main>
 
+    <footer class="bg-slate-700">
+        <div class="mx-auto w-full max-w-7xl p-4 py-6 lg:py-10">
+            <div class="md:flex md:justify-between md:gap-8">
+                <div class="mb-8 md:mb-0 max-w-xs">
+                    <a href="#" class="flex items-center mb-4">
+                        <img src="../public/assets/images/logoratu 4.png" class="h-12 me-3" alt="Ratu Komputer Logo" />
+                    </a>
+                    <p class="text-sm text-gray-300">
+                        Toko komputer terpercaya dengan produk berkualitas dan pelayanan terbaik untuk kebutuhan
+                        teknologi Anda.
+                    </p>
+                </div>
+                <div class="grid gap-8 sm:gap-12 w-full md:w-auto justify-end">
+                    <div>
+                        <h2 class="mb-6 text-base font-bold uppercase text-white">Jam Operasional</h2>
+                        <ul class="text-gray-300 space-y-1 text-sm">
+                            <li>
+                                <p>Senin - Sabtu: 09:00 - 21:00</p>
+                            </li>
+                            <li>
+                                <p>Minggu: 10:00 - 18:00</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-base font-bold uppercase text-white">Media Sosial & Kontak</h2>
+                        <ul class="text-gray-300 space-y-1 text-sm hover:text-gray-100 transition">
+                            <li>
+                                <a href="https://www.instagram.com/ratu.computer/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> ratu.computer</a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/6285692261460?text=Halo%20Ratu%20Komputer." target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 0856-9226-1460</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-600 sm:mx-auto" />
+            <div class="sm:flex sm:items-center sm:justify-center">
+                <span class="text-sm text-gray-300 text-center">
+                    ©2025 Ratu Komputer. Semua hak cipta dilindungi undang-undang.
+                </span>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
     <script>
-$(document).ready(function() {
+        $(document).ready(function () {
+            // Copy Title (jQuery)
+            $('#copy-title-btn').on('click', function () {
+                const titleText = $('#product-title').text().trim();
+                const icon = $(this).find('i');
 
-    // VARIABEL GLOBAL (untuk menyimpan ikon copy asli)
-    let originalCopyIconHtml = $('#copy-title-btn').html();
-    
-    // --- FUNGSI 1: MENGGANTI GAMBAR THUMBNAIL ---
-    $('.thumbnail').on('click', function() {
-        var newImageSrc = $(this).data('large-image');
-        $('#main-product-image').attr('src', newImageSrc);
-        
-        // Logika untuk highlight thumbnail yang sedang aktif
-        $('.thumbnail').removeClass('border-2 border-slate-700 opacity-100')
-                       .addClass('border border-gray-300 opacity-50 hover:opacity-100');
-                       
-        $(this).removeClass('border border-gray-300 opacity-50 hover:opacity-100')
-               .addClass('border-2 border-slate-700 opacity-100');
-    });
-
-
-    // --- FUNGSI 2: MENYALIN JUDUL PRODUK ---
-    $('#copy-title-btn').on('click', function() {
-        const titleText = $('#product-title').text();
-        
-        // Menggunakan Clipboard API untuk menyalin teks
-        navigator.clipboard.writeText(titleText)
-            .then(() => {
-                // Memberikan feedback visual: Simpan ikon asli dan ganti dengan ikon centang
-                originalCopyIconHtml = $(this).html(); // Pastikan ikon asli tersimpan
-                $(this).html('<i class="fas fa-check text-green-500"></i>');
-                
-                // Kembalikan ikon setelah 1.5 detik
-                setTimeout(() => {
-                    $(this).html(originalCopyIconHtml);
-                }, 1500);
-            })
-            .catch(err => {
-                console.error('Gagal menyalin: ', err);
-                alert('Gagal menyalin teks. Browser mungkin tidak mendukung Clipboard API.');
+                navigator.clipboard.writeText(titleText)
+                    .then(() => {
+                        icon.removeClass('fas fa-copy').addClass('fas fa-check text-green-500');
+                        setTimeout(() => {
+                            icon.removeClass('fas fa-check text-green-500').addClass('fas fa-copy');
+                        }, 1500);
+                    })
+                    .catch(err => alert('Gagal menyalin teks.'));
             });
-    });
+        });
 
-});
-</script>
-        
+        document.addEventListener("DOMContentLoaded", function () {
+            // === KONFIGURASI ===
+            const waNumber = "6285692261460";
+
+            // === AMBIL ELEMEN ===
+            const btnCopyUrl = document.getElementById('btn-copy');
+            const textSpanUrl = document.getElementById('text-copy');
+            const googleBtn = document.getElementById('google-search-btn');
+
+            const qtyInput = document.getElementById('quantity');
+            const stockDisplay = document.getElementById('stock-max');
+            const msgError = document.getElementById('msg-error');
+            const priceDisplay = document.getElementById('price-display');
+
+            const btnBuy = document.getElementById('btn-buy');
+            const btnAsk = document.getElementById('btn-ask');
+            const productTitle = document.getElementById('product-title').innerText.trim();
+            const productCode = document.getElementById('product-code').innerText.trim();
+
+            const maxStock = parseInt(stockDisplay.innerText);
+            const unitPrice = parseInt(priceDisplay.getAttribute('data-price'));
+
+            qtyInput.setAttribute('max', maxStock);
+
+            // Helper Format Rupiah
+            const formatRupiah = (number) => {
+                return new Intl.NumberFormat('id-ID', {
+                    style: 'currency', currency: 'IDR', minimumFractionDigits: 0
+                }).format(number);
+            };
+
+            // 1. Auto Link Google
+            if (googleBtn) {
+                googleBtn.href = `https://www.google.com/search?q=${encodeURIComponent(productTitle)}`;
+            }
+
+            // 2. Logic Copy Link URL
+            if (btnCopyUrl) {
+                btnCopyUrl.addEventListener('click', function () {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        const originalText = textSpanUrl.innerText;
+                        textSpanUrl.innerText = "Tersalin!";
+                        setTimeout(() => { textSpanUrl.innerText = originalText; }, 2000);
+                    });
+                });
+            }
+
+            // 3. Logic Qty & Update Harga
+            function getSafeQty() {
+                let val = parseInt(qtyInput.value);
+                if (isNaN(val) || val < 1) val = 1;
+                if (val > maxStock) val = maxStock;
+                return val;
+            }
+
+            if (qtyInput) {
+                qtyInput.addEventListener('input', function () {
+                    let currentQty = parseInt(this.value);
+                    if (isNaN(currentQty) || currentQty < 1) {
+                    } else if (currentQty > maxStock) {
+                        this.value = maxStock;
+                        currentQty = maxStock;
+                        msgError.classList.remove('hidden');
+                    } else {
+                        msgError.classList.add('hidden');
+                    }
+                    const safeQty = isNaN(currentQty) ? 1 : (currentQty > maxStock ? maxStock : currentQty);
+                    priceDisplay.innerText = formatRupiah(unitPrice * safeQty);
+                });
+            }
+
+            // 4. WhatsApp Tanya (FIXED: pakai event listener)
+            if (btnAsk) {
+                btnAsk.addEventListener('click', function () {
+                    const textAsk = `Halo Ratu Komputer, saya ingin bertanya tentang produk:\n\n*${productTitle}*\nKode: *${productCode}*\n\nApakah stok tersedia?`;
+                    window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(textAsk)}`, '_blank');
+                });
+            }
+
+            // 5. WhatsApp Beli
+            if (btnBuy) {
+                btnBuy.addEventListener('click', function () {
+                    const currentQty = getSafeQty();
+                    const totalFormatted = formatRupiah(unitPrice * currentQty);
+
+                    const textBuy = `Halo Ratu Komputer, saya ingin memesan:\n\n` +
+                        `Produk: *${productTitle}*\n` +
+                        `Kode: *${productCode}*\n` +
+                        `Jumlah: *${currentQty} pcs*\n` +
+                        `Total Harga: *${totalFormatted}*\n\n` +
+                        `Mohon info pembayaran. Terima kasih!`;
+
+                    window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(textBuy)}`, '_blank');
+                });
+            }
+        });
+    </script>
+
 </body>
+
 </html>
